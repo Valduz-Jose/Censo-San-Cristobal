@@ -22,18 +22,19 @@ use App\Http\Controllers\virusController;
 
 Route::get('/', homeController::class);
 
-Route::get('login',loginController::class);
+Route::get('/login',loginController::class);
 
-Route::get('singup', singupController::class);
+Route::get('/singup', singupController::class);
 
-Route::get('alcaldia', alcaldiaController::class);
+Route::get('/alcaldia', alcaldiaController::class);
 
-Route::get('noticias', noticiasController::class);
+Route::get('/noticias', noticiasController::class);
 
 //se le especifica el metodo en el array junto con el controller
 
 //Creo un grupo de rutas
 Route::controller(virusController::class)->group(function(){
     Route::get('virus','create');
+    Route::post('virus','store')->name('virus.store');
     Route::get('virus/{name}','show');
 });
