@@ -11,16 +11,24 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up()//crea la tabla
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+        Schema::create('users', function (Blueprint $table) {//blueprint para crear columnas
+            $table->id();//columna Integer Unsigned Increment
+            $table->string('email')->unique();//para proteger  a nivel de base de datos, debe ser unico
+            $table->string('password');//contraseñas
+            $table->string('name',30);//varchar 30 caracteres
+            $table->string('cedula')->nullable();//
+            $table->string('apellido',30)->nullable();//
+            $table->string('municipio',100)->nullable();//
+            $table->string('localidad',20)->nullable();//
+            $table->string('direccion')->nullable();//
+            $table->string('tlf',30)->nullable();//
+            $table->string('tlm',30)->nullable();//
+            //$table->string('tipo',10)->nullable();
+            $table->timestamp('email_verified_at')->nullable();//Guarda fechas ->Activar verificacion de correos electronicos
+            $table->rememberToken();//columnaVarchar guarda un token cada que le da mantener sesion iniciada
+            $table->timestamps();//crea dos columnas crate at y update at
         });
     }
 
@@ -29,7 +37,7 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down()//vacia la tabla
     {
         Schema::dropIfExists('users');
     }

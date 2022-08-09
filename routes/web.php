@@ -4,6 +4,7 @@ use App\Http\Controllers\alcaldiaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\noticiasController;
 use App\Http\Controllers\singupController;
 use App\Http\Controllers\virusController;
@@ -21,10 +22,14 @@ use App\Http\Controllers\virusController;
 // Creo todas mis rutas
 
 Route::get('/', homeController::class);
+Route::get('home', homeController::class);
 
-Route::get('login',loginController::class);
+Route::get('login', [loginController::class,'show']);
+Route::post('login',[loginController::class,'login']);
 
-Route::get('singup', singupController::class);
+
+Route::get('singup', [singupController::class,'show']);
+Route::post('singup',[singupController::class,'singup']);
 
 Route::get('alcaldia', alcaldiaController::class);
 
@@ -37,3 +42,5 @@ Route::controller(virusController::class)->group(function(){
     Route::get('virus','create');
     Route::get('virus/{name}','show');
 });
+
+Route::get('logout', [LogoutController::class, 'logout']);
