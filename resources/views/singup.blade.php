@@ -30,7 +30,7 @@
                 <label for="exampleInputText" class="form-label">Apellido</label>
             </div>
             <div class="form-floating mb-3">
-                <input placeholder="Cedula" type="text" name="Cedula (Si es menor de edad ingrese la del Representante)" class="form-control" id="exampleInputPassword1">
+                <input placeholder="Cedula (Si es menor de edad ingrese la del Representante)" type="text" name="cedula" class="form-control" id="exampleInputPassword1">
                 <label for="exampleInputText" class="form-label">Cedula (Si es menor de edad ingrese la del Representante)</label>
             </div>
             <div class="form-floating mb-3">

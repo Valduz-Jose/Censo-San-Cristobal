@@ -24,16 +24,11 @@
     </style>
 </head>
 <body>
-    <main class="form-container">
+    <main class="form-container border border-primary border border-5">
         <div class="container  fluid">
             @yield('content')
-        </div>
-        
+        </div>      
     </main>
-    <script src="{{url('assets/js/bootstrap.min.js')}}"></script>
-    <!-- header -->
-    <!-- nav -->
-    <!-- footer -->
-    <!-- script -->
+    <script src="{{url('assets/js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>

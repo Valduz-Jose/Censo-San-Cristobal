@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {//blueprint para crear columnas
             $table->id();//columna Integer Unsigned Increment
             $table->string('email')->unique();//para proteger  a nivel de base de datos, debe ser unico
-            $table->string('password');//contraseñas
+            $table->string('password')->unique();//contraseñas
             $table->string('name',30);//varchar 30 caracteres
             $table->string('cedula')->nullable();//
             $table->string('apellido',30)->nullable();//

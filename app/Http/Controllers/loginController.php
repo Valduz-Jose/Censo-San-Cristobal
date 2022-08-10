@@ -26,6 +26,10 @@ class loginController extends Controller
         return $this->authenticated($request,$user);
     }
     public function authenticated (Request $request, $user){
-        return redirect('home');
+        if ($user->credencial=="7777") {
+            return redirect('home');
+        }else{
+            return redirect('virus');
+        }
     }
 }
