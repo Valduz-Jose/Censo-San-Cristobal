@@ -26,9 +26,13 @@ Route::get('/login',loginController::class);
 
 Route::get('/singup', singupController::class);
 
-Route::get('/alcaldia', alcaldiaController::class);
 
-Route::get('/noticias', noticiasController::class);
+Route::get('/alcaldia', [alcaldiaController::class,'index']);
+Route::post('/alcaldia',[alcaldiaController::class,'search'])->name('alcaldia.search');
+//Route::get('/alcaldia/create',[alcaldiaController::class,'post'])->name('alcaldia.post');
+//Route::post('/alcaldia/create',[alcaldiaController::class,'store'])->name('alcaldia.store');
+
+//Route::get('/noticias', noticiasController::class);
 
 //se le especifica el metodo en el array junto con el controller
 

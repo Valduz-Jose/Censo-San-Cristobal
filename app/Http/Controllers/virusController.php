@@ -22,6 +22,6 @@ class virusController extends Controller
             $sintomaDB.=", ";
         }
         $sintomaDB.=$request->input('otroSintoma'); // variable concatenada con todos los sintomas
-        return $sintomaDB;
+        return view('virus.create');
     }
 }
