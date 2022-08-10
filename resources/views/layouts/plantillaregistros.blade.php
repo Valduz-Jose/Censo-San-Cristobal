@@ -11,9 +11,11 @@
     <!-- estilos -->
 </head>
 <body>
-    @include('layouts.partials.navbar')
-    <main>
-        @yield('content')
+    <main class="form-container">
+        <div class="container  fluid">
+            @yield('content')
+        </div>
+        
     </main>
     <script src="{{url('assets/js/bootstrap.min.js')}}"></script>
     <!-- header -->
