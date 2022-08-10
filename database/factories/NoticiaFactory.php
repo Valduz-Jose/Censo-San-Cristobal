@@ -25,7 +25,7 @@ class NoticiaFactory extends Factory
     public function definition()
     {
         return [
-            'titulo'=>$this->faker->word(), 
+            'titulo'=>$this->faker->name(), 
             'descripcion'=>$this->faker->paragraph()
         ];
     }

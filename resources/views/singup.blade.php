@@ -53,9 +53,15 @@
                 <input placeholder="Telefono Movil" type="text" name="tlm" class="form-control" id="exampleInputPassword1">
                 <label for="exampleInputText" class="form-label">Telefono Movil</label>
             </div>
+            <div class="form-floating mb-3">
+                <input placeholder="Credenciales Usuario Natual 0" type="text" name="credencial" class="form-control" id="exampleInputPassword1">
+                <label for="exampleInputText" class="form-label">Credenciales</label>
+            </div>
+            
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button placeholder="" type="submit" class="btn btn-primary ">Singup</button>
             <p>Or <a href="login">Login</a></p>
             </div>
+
         </form>
 @endsection

@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('direccion')->nullable();//
             $table->string('tlf',30)->nullable();//
             $table->string('tlm',30)->nullable();//
-            //$table->string('tipo',10)->nullable();
+            $table->string('credencial',10)->nullable();
             $table->timestamp('email_verified_at')->nullable();//Guarda fechas ->Activar verificacion de correos electronicos
             $table->rememberToken();//columnaVarchar guarda un token cada que le da mantener sesion iniciada
             $table->timestamps();//crea dos columnas crate at y update at

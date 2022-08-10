@@ -33,8 +33,9 @@ class UserFactory extends Factory
             'municipio' =>$this->faker->word(),//palabras
             'localidad' =>$this->faker->word(),
             'direccion' =>$this->faker->text($maxNBChars = 100),//texto de maximo 100
-            'tlf-f' =>$this->faker->numberBetween(11111111,99999999),
-            'tlf-m' =>$this->faker->numberBetween(11111111,99999999),
+            'tlf' =>$this->faker->numberBetween(11111111,99999999),
+            'tlm' =>$this->faker->numberBetween(11111111,99999999),
+            'credencial' =>$this->faker->randomElement(["7777","0"])
         ];
     }
 

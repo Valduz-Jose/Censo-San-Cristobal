@@ -33,7 +33,8 @@ Route::post('singup',[singupController::class,'singup']);
 
 Route::get('alcaldia', alcaldiaController::class);
 
-Route::get('noticias', noticiasController::class);
+Route::get('noticias', [noticiasController::class,'show']);
+Route::get('CrearNoticia', [noticiasController::class,'create']);
 
 //se le especifica el metodo en el array junto con el controller
 
@@ -44,3 +45,4 @@ Route::controller(virusController::class)->group(function(){
 });
 
 Route::get('logout', [LogoutController::class, 'logout']);
+
