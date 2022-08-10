@@ -14,4 +14,14 @@ class virusController extends Controller
         return view("virus.show",compact('name'));
         //compact('name')  ['name'=>$name]
     }
+    public function store(Request $request){
+        $sintomas=$request->input('sintomas');
+        $sintomaDB="";
+        foreach($sintomas as $sintoma){
+            $sintomaDB.=$sintoma;
+            $sintomaDB.=", ";
+        }
+        $sintomaDB.=$request->input('otroSintoma'); // variable concatenada con todos los sintomas
+        return view('virus.create');
+    }
 }
