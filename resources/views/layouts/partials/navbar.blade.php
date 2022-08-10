@@ -12,12 +12,25 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="noticias">Noticias</a>
           </li>
+          
           {{-- Menu para Alcaldia --}}
           @if (auth()->user()->credencial== "7777")    
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="CrearNoticia">Crear Noticia</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Reportes</a>
+            </li>
           @endif
+          {{-- Menu para Usuario --}}
+          {{-- @if (auth()->user()->credencial== "0000")    
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="CrearNoticia"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Reportes</a>
+          </li>
+          @endif --}}
           {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
@@ -29,9 +42,9 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li> --}}
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link disabled">Creacion</a>
-          </li>
+          </li> --}}
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -43,24 +56,28 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li> --}}
-            @auth    
+            @auth   
+          <ul class="navbar-nav me-5 mb-2 mb-lg-0">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 {{auth()->user()->name ?? auth()->user()->email}}
               </a>
-              <ul class="dropdown-menu">
+            
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="home">Estadisticas</a></li>
                 <li><a class="dropdown-item" href="CrearNoticia">Crear Noticia</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="Logout">Logout</a></li>
               </ul>
             </li>
+          </ul>
             @endauth
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link disabled"></a>
-            </li>
+            </li> --}}
           </ul>
         </form>
       </div>
     </div>
   </nav>
+  

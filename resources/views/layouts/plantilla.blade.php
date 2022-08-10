@@ -19,6 +19,7 @@
         @yield('content')
     </main>
     <script src="{{url('assets/js/bootstrap.min.js')}}"></script>
+    
     <!-- footer -->
     <footer>
         @auth
@@ -30,4 +31,5 @@
     <!-- script -->
 
 </body>
+
 </html>

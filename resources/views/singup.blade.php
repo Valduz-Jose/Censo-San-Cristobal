@@ -30,8 +30,8 @@
                 <label for="exampleInputText" class="form-label">Apellido</label>
             </div>
             <div class="form-floating mb-3">
-                <input placeholder="Cedula" type="text" name="cedula" class="form-control" id="exampleInputPassword1">
-                <label for="exampleInputText" class="form-label">Cedula</label>
+                <input placeholder="Cedula" type="text" name="Cedula (Si es menor de edad ingrese la del Representante)" class="form-control" id="exampleInputPassword1">
+                <label for="exampleInputText" class="form-label">Cedula (Si es menor de edad ingrese la del Representante)</label>
             </div>
             <div class="form-floating mb-3">
                 <input placeholder="Municipio" type="text" name="municipio" class="form-control" id="exampleInputPassword1">
@@ -50,8 +50,8 @@
                 <label for="exampleInputText" class="form-label">Telefono Fijo</label>
             </div>
             <div class="form-floating mb-3">
-                <input placeholder="Telefono Movil" type="text" name="tlm" class="form-control" id="exampleInputPassword1">
-                <label for="exampleInputText" class="form-label">Telefono Movil</label>
+                <input placeholder="Telefono Movil (no obligatorio)" type="text" name="tlm" class="form-control" id="exampleInputPassword1">
+                <label for="exampleInputText" class="form-label">Telefono Movil (no obligatorio) </label>
             </div>
             <div class="form-floating mb-3">
                 <input placeholder="Credenciales Usuario Natual 0" type="text" name="credencial" class="form-control" id="exampleInputPassword1">
