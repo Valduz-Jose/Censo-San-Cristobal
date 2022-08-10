@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -13,30 +14,38 @@ class UserFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return array<string, mixed>
+     * @var string
+     */
+    protected $model = User::class;
+    /**
+     * Indicate that the model's email address should be unverified.
+     *
+     * @return array
      */
     public function definition()
     {
         return [
-            'name' => fake()->name(),
-            'email' => fake()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
+            'email' =>$this->faker->safeEmail(),//genera correos
+            'password' =>$this->faker->password(), // password
+            'cedula' =>$this->faker->randomDigit(),//digitos aleatorios
+            'apellido' =>$this->faker->name(),//dos nombres
+            'name' =>$this->faker->name(),
+            'municipio' =>$this->faker->word(),//palabras
+            'localidad' =>$this->faker->word(),
+            'direccion' =>$this->faker->text($maxNBChars = 100),//texto de maximo 100
+            'tlf' =>$this->faker->numberBetween(11111111,99999999),
+            'tlm' =>$this->faker->numberBetween(11111111,99999999),
+            'credencial' =>$this->faker->randomElement(["7777","0"])
         ];
     }
 
-    /**
-     * Indicate that the model's email address should be unverified.
-     *
-     * @return static
-     */
-    public function unverified()
-    {
-        return $this->state(function (array $attributes) {
-            return [
-                'email_verified_at' => null,
-            ];
-        });
-    }
+    
+    // public function unverified()
+    // {
+    //     return $this->state(function (array $attributes) {
+    //         return [
+    //             'email_verified_at' => null,
+    //         ];
+    //     });
+    // }
 }

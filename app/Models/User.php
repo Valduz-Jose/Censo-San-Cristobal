@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class User extends Authenticatable
 {
@@ -21,6 +23,14 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'apellido',
+        'cedula',
+        'municipio',
+        'localidad',
+        'direccion',
+        'tlf',
+        'tlm',
+        'credencial'
     ];
 
     /**
@@ -41,4 +51,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //mutador
+    public function setPasswordAttribute($value){//mutador para encriptar la clave
+        $this->attributes['password']= bcrypt($value);
+    }
+    protected function name(): Attribute{
+        return new Attribute(
+            get: fn($value)=>ucwords($value),//accesor
+        //primera letra muestra en mayuscula
+
+            set: fn($value)=>strtolower($value)//mutador
+                //Transformo el valor
+            
+        );
+    }
 }
