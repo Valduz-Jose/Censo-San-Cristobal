@@ -31,18 +31,19 @@ Route::post('login',[loginController::class,'login']);
 Route::get('singup', [singupController::class,'show']);
 Route::post('singup',[singupController::class,'singup']);
 
-Route::get('alcaldia', alcaldiaController::class);
+Route::get('alcaldia', [alcaldiaController::class,'index']);
+Route::post('alcaldia',[alcaldiaController::class,'search'])->name('alcaldia.search');
 
 Route::get('noticias', [noticiasController::class,'show']);
 Route::get('CrearNoticia', [noticiasController::class,'create']);
 Route::post('CrearNoticia', [noticiasController::class,'store']);
-
 
 //se le especifica el metodo en el array junto con el controller
 
 //Creo un grupo de rutas
 Route::controller(virusController::class)->group(function(){
     Route::get('virus','create');
+    Route::post('virus','store')->name('virus.store');
     Route::get('virus/{name}','show');
 });
 

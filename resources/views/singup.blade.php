@@ -1,7 +1,7 @@
 
 @extends('layouts.plantillaregistros')
 
-@section('title','Singup')
+@section('title','Registro de usuarios: ')
     
 @section('content')
     <h1 class="text-center">Singup</h1>
