@@ -7,6 +7,7 @@
     <div class="container-fluid">
         <h1 class="text-center">Bienvenido al Censo San Cristobal</h1>
             <hr class="border border-primary border-3 opacity-75">
+            <img src="assets/img/city.png" alt="">
             {{-- Si esta autenticado --}}
             @auth
                 {{-- @include('CrearNoticia') --}}

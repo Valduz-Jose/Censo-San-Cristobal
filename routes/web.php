@@ -35,6 +35,8 @@ Route::get('alcaldia', alcaldiaController::class);
 
 Route::get('noticias', [noticiasController::class,'show']);
 Route::get('CrearNoticia', [noticiasController::class,'create']);
+Route::post('CrearNoticia', [noticiasController::class,'store']);
+
 
 //se le especifica el metodo en el array junto con el controller
 
