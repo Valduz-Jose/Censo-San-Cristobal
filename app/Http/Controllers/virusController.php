@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Info;
+use App\Models\User;
 
 class virusController extends Controller
 {
@@ -14,6 +16,7 @@ class virusController extends Controller
         return view("virus.show",compact('name'));
         //compact('name')  ['name'=>$name]
     }
+
     public function store(Request $request){
         $sintomas=$request->input('sintomas');
         $sintomaDB="";
@@ -21,7 +24,26 @@ class virusController extends Controller
             $sintomaDB.=$sintoma;
             $sintomaDB.=", ";
         }
-        $sintomaDB.=$request->input('otroSintoma'); // variable concatenada con todos los sintomas
+        //$sintomaDB.=$request->input('otroSintoma'); // variable concatenada con todos los sintomas
+        
+        $usermail= session('userMail');
+        $user = User::where('email',$usermail)->first();
+        $id=$user->cedula;
+        $info = Info::find($id);
+
+        if($info==null){
+            $info= new Info;
+        }
+        
+        $info->id= $id;
+        $info->virus= $request->input('virus');
+        $info->centro= $request->input('centroSalud');
+        $info->sintomas= $sintomaDB;
+        
+        $info->otroSintomas= $request->input('otroSintoma');
+
+        $info->save();    
+        
         return view('virus.create');
     }
 }

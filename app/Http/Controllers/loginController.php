@@ -23,6 +23,7 @@ class loginController extends Controller
         }
         $user = Auth::getProvider()->retrieveByCredentials($credentials);
         Auth::login($user);
+        session(['userMail'=> $request->input('email')]);
         return $this->authenticated($request,$user);
     }
     public function authenticated (Request $request, $user){

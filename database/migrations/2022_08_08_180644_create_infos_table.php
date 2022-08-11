@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('virus');
             $table->string('centro',100);
             $table->text('sintomas');
+            $table->string('otroSintomas')->nullable();
             $table->timestamps();
         });
     }

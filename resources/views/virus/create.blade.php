@@ -8,9 +8,10 @@
     <form action="{{route('virus.store')}}" method="post">
         @csrf
         <label >Virus con el que fue diagnosticado: </label>
-        <input type="radio" name="virus" value="viruelaMono" ><label >Viruela del mono </label>
+        <input type="radio" name="virus" value="viruela del mono" ><label >Viruela del mono </label>
         <input type="radio" name="virus" value="covid" ><label >COVID-19 </label>
-        <input type="radio" name="virus" value="noDiagnosticado"><label >No diagnosticado</label>
+        <input type="radio" name="virus" value="variante del covid" ><label >COVID-19 Variantes</label>
+        <input type="radio" name="virus" value="no diagnosticado"><label >No diagnosticado</label>
         <br>
         <label >¿Ya fue atendido por un centro de salud?</label>
         <input type="radio" name="atendido" value="si" ><label >SI</label>
