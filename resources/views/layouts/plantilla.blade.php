@@ -16,7 +16,9 @@
     <!-- nav -->
     @include('layouts.partials.navbar')
     <main>
-        @yield('content')
+        <div class="container-fluid">
+            @yield('content')
+        </div>
     </main>
     <script src="{{url('assets/js/bootstrap.min.js')}}"></script>
     

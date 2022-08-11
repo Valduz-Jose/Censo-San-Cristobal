@@ -24,9 +24,9 @@ class InfoFactory extends Factory
     public function definition()
     {
         return [
-            'virus'=>$this->faker->randomElement(["Covid-19","Covid con Variacion","Viruela de Mono"]),
+            'virus'=>$this->faker->randomElement(["variante","covid","viruela","nodiagnosticado"]),
             'centro'=>$this->faker->sentence(),
-            'sintomas'=>$this->faker->paragraph()
+            'sintomas'=>$this->faker->randomElement(["tos","fiebre","erupciones en la piel","dolor de cabeza","dolores musculares","vomito","otroSintoma"])
         ];
     }
 }

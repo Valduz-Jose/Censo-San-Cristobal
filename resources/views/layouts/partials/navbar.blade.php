@@ -36,7 +36,7 @@
                     {{-- Menu para Alcaldia --}}
                     @if (auth()->user()->credencial== "7777")    
                       <li><a class="dropdown-item" href="CrearNoticia">Crear Noticia</a></li>
-                      <li><a class="dropdown-item" href="#">Reportes</a></li>
+                      <li><a class="dropdown-item" href="alcaldia">Reportes</a></li>
                     @endif
                     {{-- lOGOUT --}}
                     <li><hr class="dropdown-divider"></li>
