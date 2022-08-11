@@ -4,7 +4,7 @@
 @section('title','Noticias')
     
 @section('content')
-<div class="container-fluid">
+{{-- <div class="container-fluid"> --}}
     <h1 class="text-center">Noticias</h1>
     <hr class="border border-primary border-3 opacity-75">
     <div class="row">
@@ -21,7 +21,7 @@
     @endforeach
     </div>
     {{$noticias->links()}}
-</div>
+{{-- </div> --}}
 @endsection
 {{-- <ul>
     @foreach ($noticias as $noticia)
