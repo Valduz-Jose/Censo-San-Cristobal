@@ -44,6 +44,6 @@ class virusController extends Controller
 
         $info->save();    
         
-        return view('virus.create');
+        return redirect('home');
     }
 }
