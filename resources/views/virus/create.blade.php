@@ -24,6 +24,12 @@
                     COVID-19 
                 </label>
             </div>
+            <div class="form-check">
+                <input name="virus" value="variante del covid" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Variante del COVID-19 
+                </label>
+            </div>
             
             <div class="form-check">
                 <input name="virus" value="noDiagnosticado" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
