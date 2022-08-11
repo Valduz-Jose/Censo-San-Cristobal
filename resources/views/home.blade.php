@@ -5,8 +5,6 @@
     
 @section('content')
 {{-- Si esta autenticado --}}
-@auth
-<div class="container-fluid">
     <h1 class="text-center">Bienvenido al Censo San Cristobal</h1>
         <hr class="border border-primary border-3 opacity-75">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
@@ -21,29 +19,29 @@
               <div class="carousel-item active">
                 <img src="assets/img/foto1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
+                  <h5>¿Conoces Sobre el Virus?</h5>
+                  <p></p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="assets/img/foto2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
+                  <h5>San Cristobal Se cuida</h5>
+                  <p></p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="assets/img/foto3.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
+                  <h5>¿Ya te Vacunaste? </h5>
+                  <p>Conoce los Centros de Salud mas cercanos</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="assets/img/foto4.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
+                  <h5>Indices de Contagios</h5>
+                  <p>Se logra reducir el número de contagios Diarios</p>
                 </div>
               </div>
               
@@ -57,11 +55,5 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-                {{-- @include('CrearNoticia') --}}
-            @endauth
-            {{-- No Autenticado --}}
-            @guest
-            <p>Autenticate para ver el contenido <a href="login">Inicia Sesión</a></p>
-            @endguest
-    </div>    
+    
 @endsection

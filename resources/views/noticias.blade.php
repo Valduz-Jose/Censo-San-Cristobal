@@ -4,6 +4,7 @@
 @section('title','Noticias')
     
 @section('content')
+
 {{-- <div class="container-fluid"> --}}
     <h1 class="text-center">Noticias</h1>
     <hr class="border border-primary border-3 opacity-75">
@@ -12,7 +13,7 @@
         <div class="col-sm-6">
             <div class="card ">
                 <div class="card-body">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="assets/img/foto1.jpg" class="card-img-top" alt="...">
                     <h5 class="card-title">{{$noticia->titulo}}</h5>
                     <p class="card-text">{{$noticia->descripcion}}</p>
                 </div>

@@ -44,6 +44,6 @@ class virusController extends Controller
 
         $info->save();    
         
-        return redirect('home')->with('success','Sintomas Cargados Satisfactoriamente');
+        return redirect('home');
     }
 }

@@ -30,10 +30,10 @@
               </a>
               <ul class="dropdown-menu">
                 {{-- Menu para Usuario --}}
-                @if (auth()->user()->credencial== "0") 
+                {{-- @if (auth()->user()->credencial== "0") 
                 <li><a class="dropdown-item" href="https://policlinicametropolitana.org/informacion-de-salud/viruela-del-mono-origen-sintomas-y-tipos-de-contagio/">Enfermedad del Mono</a></li>  
                 @endif
-                
+                 --}}
                 {{-- Menu para Alcaldia --}}
                 @if (auth()->user()->credencial== "7777")    
                 <li><a class="dropdown-item" href="CrearNoticia">Crear Noticia</a></li>
