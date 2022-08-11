@@ -25,11 +25,13 @@ class virusController extends Controller
     public function store(Request $request){
         $sintomas=$request->input('sintomas');
         $sintomaDB="";
-        foreach($sintomas as $sintoma){
-            $sintomaDB.=$sintoma;
-            $sintomaDB.=", ";
+        if($sintomas!=null){
+            foreach($sintomas as $sintoma){
+                $sintomaDB.=$sintoma;
+                $sintomaDB.=", ";
+            }
         }
-        //$sintomaDB.=$request->input('otroSintoma'); // variable concatenada con todos los sintomas
+        
         
         $usermail= session('userMail');
         $user = User::where('email',$usermail)->first();
@@ -41,6 +43,9 @@ class virusController extends Controller
         }
         
         $info->id= $id;
+        if($request->input('virus')==null){
+            return redirect()->to('virus')->withErrors('Por favor ingrese el virus con el que fue diagnosticado');
+        }
         $info->virus= $request->input('virus');
         $info->centro= $request->input('centroSalud');
         $info->sintomas= $sintomaDB;

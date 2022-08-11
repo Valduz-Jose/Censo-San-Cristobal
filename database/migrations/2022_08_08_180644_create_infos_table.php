@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create ('infos', function (Blueprint $table) {
             $table->id();
             $table->string('virus');
-            $table->string('centro',100);
-            $table->text('sintomas');
+            $table->string('centro',100)->nulleable();
+            $table->text('sintomas')->nulleable();
             $table->string('otroSintomas')->nullable();
             $table->timestamps();
         });

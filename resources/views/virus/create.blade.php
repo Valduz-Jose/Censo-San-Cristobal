@@ -7,12 +7,13 @@
     <h1>Encuesta de sintomas</h1>
     <form action="{{route('virus.store')}}" method="post">
         @csrf
+        @include('layouts.partials.messages')
         <div>
             <div class="badge bg-primary text-wrap fs-6">
                 Virus con el que fue diagnosticado
             </div>
             <div class="form-check">
-                <input name="virus" value="viruelaMono" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <input name="virus" value="viruela del mono" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                 <label class="form-check-label" for="flexRadioDefault1">
                     Viruela del mono 
                 </label>
