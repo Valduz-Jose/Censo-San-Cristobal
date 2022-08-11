@@ -13,11 +13,12 @@
             <a class="nav-link active" aria-current="page" href="noticias">Noticias</a>
           </li>
         </ul>
-        {{-- Boton --}}
-        <form class="d-flex" role="search">
+        {{-- Boton de busqueda--}}
+        <form action="{{route('navBar.search')}}" method="POST" class="d-flex" role="search">
+          @csrf
           @if (auth()->user()->credencial== "7777")    
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-info" type="submit">Buscar</button>
+            <input name="cedula" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button name="buscar" class="btn btn-outline-info" type="submit">Buscar</button>
           @endif
           {{-- Submenu --}}
           @auth

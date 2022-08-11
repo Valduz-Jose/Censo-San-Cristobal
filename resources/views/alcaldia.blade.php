@@ -7,16 +7,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <h1>Alcaldia</h1>
     {{-- comment <a href="{{route('alcaldia.post')}}">Publicar una noticia</a> --}} 
-    <div>
-        <br>
-        <form action="{{route('alcaldia.search')}}" method="post">
-            @csrf
-            <label for="">Buscar usuario: </label>
-            <input type="number" name="cedula" id="cedula">
-            <br>
-            <input type="submit" value="Buscar" name="buscar">
-        </form>
-    </div>
+
 
     <div>
         <h3>Reportes: </h3>
@@ -30,7 +21,7 @@
         <br>
         <label for="">No Diagnosticados: {{$r1['nodiagnosticado']}}</label>
         <h4>Estadistica de sintomas presentados: </h4>
-        <div style="height: 800px">
+        <div style="height: 500px">
             <canvas id='estadisticas' ></canvas>
         </div>
         <script>
