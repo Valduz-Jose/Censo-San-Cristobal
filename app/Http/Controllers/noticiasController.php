@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\noticia;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class noticiasController extends Controller
 {
@@ -25,6 +25,10 @@ class noticiasController extends Controller
         $noticia->descripcion = $request->descripcion;
         // salvo el objeto
         $noticia->save();
-        return redirect('noticias'); 
+        if(Auth::check() ){//si ya esta logueado
+            return redirect('noticias'); 
+        }else{
+            return view("login");
+        }
     }
 }

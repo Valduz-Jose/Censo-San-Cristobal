@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Info;
+use Illuminate\Support\Facades\Auth;
 
 class alcaldiaController extends Controller
 {
@@ -30,7 +31,12 @@ class alcaldiaController extends Controller
         }
         
         $r2['otroSintoma'] = $cont;
-        return view("alcaldia", compact('r1'), compact('r2'));
+
+        if(Auth::check() ){//si ya esta logueado
+            return view("alcaldia", compact('r1'), compact('r2'));
+        }else{
+            return view("login");
+        }
     }
 
 

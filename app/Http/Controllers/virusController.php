@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Info;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class virusController extends Controller
 {
     //
     public function create(){
-        return view("virus.create");
+        if(Auth::check() ){//si ya esta logueado
+            return view("virus.create");
+        }else{
+            return view("login");
+        }
     }
     public function show($name){//paso la variable a la vista
         return view("virus.show",compact('name'));

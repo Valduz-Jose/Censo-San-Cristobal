@@ -19,7 +19,7 @@
           {{-- Boton de busqueda--}}
           @if (auth()->user()->credencial== "7777")    
           @csrf
-          <input name="cedula" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input name="cedula" class="form-control me-2" type="search" placeholder="Cedula a Buscar" aria-label="Search">
           <button name="buscar" class="btn btn-outline-info" type="submit">Buscar</button>
           @endif
           {{-- Submenu --}}
