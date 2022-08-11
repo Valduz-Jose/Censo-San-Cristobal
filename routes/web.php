@@ -44,7 +44,7 @@ Route::post('CrearNoticia', [noticiasController::class,'store']);
 Route::controller(virusController::class)->group(function(){
     Route::get('virus','create');
     Route::post('virus','store')->name('virus.store');
-    Route::get('virus/{name}','show');
+    //Route::get('virus/{name}','show');
 });
 
 Route::get('logout', [LogoutController::class, 'logout']);
