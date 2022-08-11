@@ -33,11 +33,6 @@ class alcaldiaController extends Controller
         return view("alcaldia", compact('r1'), compact('r2'));
     }
 
-    public function search(Request $request){
-        //buscar usuario en la DB por cedula y cargar la vista de todos los datos del usuario
-
-        return "buscando ".$request->input('cedula'); 
-    }
 
 
 }

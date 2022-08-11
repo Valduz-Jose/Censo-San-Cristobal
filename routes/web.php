@@ -8,6 +8,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\noticiasController;
 use App\Http\Controllers\singupController;
 use App\Http\Controllers\virusController;
+use App\Http\Controllers\navBarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,4 +49,6 @@ Route::controller(virusController::class)->group(function(){
 });
 
 Route::get('logout', [LogoutController::class, 'logout']);
+
+Route::post('search',[navBarController::class,'search'])->name('navBar.search');
 
