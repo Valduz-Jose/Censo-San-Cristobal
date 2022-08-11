@@ -9,7 +9,9 @@ class homeController extends Controller
 {
     //Metodos que administraran las rutas
     public function __invoke(){//el Invoke 
-        // Auth::user()->
-        return view("home");
+        if(Auth::check() ){//si ya esta logueado
+            return redirect("home");
+        }
+        return redirect("login");
     }
 }
