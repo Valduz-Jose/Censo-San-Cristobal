@@ -27,7 +27,7 @@ class UserFactory extends Factory
         return [
             'email' =>$this->faker->safeEmail(),//genera correos
             'password' =>$this->faker->password(), // password
-            'cedula' =>$this->faker->randomDigit(),//digitos aleatorios
+            'cedula' =>$this->faker->unique()->numberBetween(1000000,99999999),//digitos aleatorios
             'apellido' =>$this->faker->name(),//dos nombres
             'name' =>$this->faker->name(),
             'municipio' =>$this->faker->word(),//palabras
