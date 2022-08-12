@@ -18,16 +18,17 @@ class singupController extends Controller
     }
     //reglas para insertar
     public function singup(RegisterRequest $request){
-        if($request->input('credencial')==null){
-            $request->credencial=0;
-            $user = User::create($request->validated());
-        }
-        else if($request->input('credencial')=='7777' || $request->input('credencial')=='0'){
-            $user = User::create($request->validated());
-        }
-        else{
-            return redirect('singup')->withErrors('Credencial erronea, si no tiene credencial deje el espacio vacio');
-        }
+        // $request->getCredentials();
+        // if($request->input('credencial')==null){
+        //     $request->credencial=0;
+        //     $user = User::create($request->validated());
+        // }
+        // else if($request->input('credencial')=='7777' || $request->input('credencial')=='0'){
+        //     $user = User::create($request->validated());
+        // }
+        // else{
+        //     return redirect('singup')->withErrors('Credencial erronea, si no tiene credencial deje el espacio vacio');
+        // }
         
         return redirect('login')->with('success','Account Created Successfully');
     }
