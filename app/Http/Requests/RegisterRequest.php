@@ -36,7 +36,7 @@ class RegisterRequest extends FormRequest
             'direccion' =>'required',
             'tlf' =>'required',
             //'tlm' =>'required',
-            'credencial' =>'required'
+            //'credencial' =>'required'
         ];
     }
 }

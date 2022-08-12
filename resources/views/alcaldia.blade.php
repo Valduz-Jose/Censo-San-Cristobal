@@ -13,20 +13,31 @@
         <p class="fw-semibold fs-2 text-decoration-underline">Reportes </p>
         
         <div class="border border-primary border border-5">
-            <p class="fw-bolde fs-3" >Cantidad de personas contagiadas: </p>
-            <label class="fs-6" for="">COVID-19: {{$r1['covid']}}</label>
-            <br>
-            <label class="fs-6"for="">Variantes del COVID: {{$r1['variante']}} </label>
-            <br>
-            <label class="fs-6"for="">Viruela del mono: {{$r1['viruela']}} </label>
-            <br>
-            <label class="fs-6"for="">No Diagnosticados: {{$r1['nodiagnosticado']}}</label>
+            <p class="fw-semibold fs-2 text-decoration-underline" >Reporte de personas contagiadas: </p>
+            <table class="table table-info">
+                <tr>
+                    <th scope="col">Covid-19 </th>
+                    <td>{{$r1['covid']}}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Variantes Covid </th>
+                    <td>{{$r1['variante']}}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Viruela del mono </th>
+                    <td>{{$r1['viruela']}}</td>
+                </tr>
+                <tr>
+                    <th scope="col">No diagnosticados</th>
+                    <td>{{$r1['nodiagnosticado']}}</td>
+                </tr>
+            </table>
         </div><br>
         <hr class="border border-primary border-3 opacity-75">
 
-        <p class="fw-semibold fs-2 text-decoration-underline" >Estadistica de sintomas presentados </p>
+        <p class="fw-semibold fs-2 text-decoration-underline" >Estadistica de sintomas presentados: </p>
         <div class="border border-primary border border-5">
-            <div style="height: 800px">
+            <div style="height: 700px">
                 <canvas id='estadisticas' ></canvas>
             </div>
             <script>
