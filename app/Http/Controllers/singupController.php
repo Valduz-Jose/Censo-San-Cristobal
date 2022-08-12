@@ -25,7 +25,7 @@ class singupController extends Controller
             $user = User::create($request->validated());
         }
         else{
-            return redirect('singup')->withErrors('Credencial erronea, si no tiene credencial deje el espacio vacio');
+            return redirect('singup')->withErrors('Credencial erronea, si es un usuario natural deje el espacio vacio');
         }
         return redirect('login')->with('success','Account Created Successfully');
     }
