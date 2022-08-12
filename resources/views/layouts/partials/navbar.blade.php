@@ -1,20 +1,20 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="home"><img src="assets/img/city2.png" alt="" width="64" height="64"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    {{-- <a class="navbar-brand" href="home"><img src="assets/img/city3.svg" alt="" width="54" height="54"></a> --}}
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home">Home</a>
+            <a class="nav-link active" aria-current="page" href="home"><img src="assets/img/city3.svg" alt="" width="44" height="44">   Home</a>
           </li>
           @auth
           
           <form action="{{route('navBar.search')}}" method="POST" class="d-flex" role="search">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="noticias">Noticias</a>
+              <a class="nav-link active" aria-current="page" href="noticias"><img src="assets/img/news.svg" alt="" width="44" height="44">   Noticias</a>
             </li>
           </ul>
           {{-- Boton de busqueda--}}

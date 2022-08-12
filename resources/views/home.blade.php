@@ -17,16 +17,16 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="assets/img/foto1.jpg" class="d-block w-100" alt="...">
+                <img src="assets/img/foto2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>¿Conoces Sobre el Virus?</h5>
+                  <h5>San Cristobal Se cuida</h5>
                   <p></p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/img/foto2.jpg" class="d-block w-100" alt="...">
+                <img src="assets/img/foto1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>San Cristobal Se cuida</h5>
+                  <h5>¿Conoces Sobre el Virus?</h5>
                   <p></p>
                 </div>
               </div>
