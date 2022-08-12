@@ -35,8 +35,8 @@ class RegisterRequest extends FormRequest
             'localidad' =>'required',
             'direccion' =>'required',
             'tlf' =>'required',
-            //'tlm' =>'required',
-            //'credencial' =>'required'
+            'tlm' =>'required',
+            'credencial' =>'nullable' 
         ];
     }
 }

@@ -12,7 +12,7 @@ class virusController extends Controller
     //
     public function create(){
         if(Auth::check() ){//si ya esta logueado
-            if(auth()->user()->credencial== "0"){
+            if(auth()->user()->credencial== null){
                 return view("virus.create");
             }else{
                 return redirect("home");
