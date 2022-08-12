@@ -44,6 +44,7 @@ class virusController extends Controller
 
         if($info==null){
             $info= new Info;
+            //saf
         }
         
         $info->id= $id;
