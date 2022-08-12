@@ -36,10 +36,10 @@ class alcaldiaController extends Controller
             if(auth()->user()->credencial== "7777"){
                 return view("alcaldia", compact('r1'), compact('r2'));
             }else{
-                return view("home");
+                return redirect("home");
             }
         }else{
-            return view("login");
+            return redirect("login");
         }
     }
 
