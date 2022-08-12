@@ -33,7 +33,11 @@ class alcaldiaController extends Controller
         $r2['otroSintoma'] = $cont;
 
         if(Auth::check() ){//si ya esta logueado
-            return view("alcaldia", compact('r1'), compact('r2'));
+            if(auth()->user()->credencial== "7777"){
+                return view("alcaldia", compact('r1'), compact('r2'));
+            }else{
+                return view("home");
+            }
         }else{
             return view("login");
         }

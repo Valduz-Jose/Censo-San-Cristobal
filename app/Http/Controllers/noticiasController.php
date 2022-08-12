@@ -12,10 +12,22 @@ class noticiasController extends Controller
     public function show(){
         //$noticias = noticia::all();//extraigo la coleccion de datos
         $noticias = noticia::orderBy('id','desc')->paginate(); //paginado
-        return view("noticias",compact('noticias'));
+        if(Auth::check() ){//si ya esta logueado
+            return view("noticias",compact('noticias'));
+        }else{
+            return redirect("login");
+        }
     }
     public function create(){
-        return view("CrearNoticia");
+        if(Auth::check() ){//si ya esta logueado
+            if(auth()->user()->credencial== "7777"){
+                return view("CrearNoticia"); 
+            }else{
+                return redirect("home");
+            }
+        }else{
+            return redirect("login");
+        }
     }
     public function store(Request $request){
         // creo el objeo
@@ -28,7 +40,7 @@ class noticiasController extends Controller
         if(Auth::check() ){//si ya esta logueado
             return redirect('noticias'); 
         }else{
-            return view("login");
+            return redirect("login");
         }
     }
 }

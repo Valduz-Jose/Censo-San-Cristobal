@@ -12,7 +12,7 @@ class homeController extends Controller
         if(Auth::check()){//si ya esta logueado
             return view("home");
         }else{
-            return view("login");
+            return redirect("login");
         }
     }
 }

@@ -12,9 +12,13 @@ class virusController extends Controller
     //
     public function create(){
         if(Auth::check() ){//si ya esta logueado
-            return view("virus.create");
+            if(auth()->user()->credencial== "0"){
+                return view("virus.create");
+            }else{
+                return redirect("home");
+            }
         }else{
-            return view("login");
+            return redirect("login");
         }
     }
     public function show($name){//paso la variable a la vista
