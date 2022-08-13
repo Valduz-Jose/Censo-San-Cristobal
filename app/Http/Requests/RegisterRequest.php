@@ -29,7 +29,7 @@ class RegisterRequest extends FormRequest
             'password'=>'required|min:8',
             'password_confirmation'=>'required|same:password',
             'name' =>'required',
-            'cedula' =>'required',
+            'cedula' =>'required|numeric|unique:users,cedula',
             'apellido' =>'required',
             'municipio' =>'required',
             'localidad' =>'required',

@@ -35,7 +35,7 @@ class UserFactory extends Factory
             'direccion' =>$this->faker->text($maxNBChars = 100),//texto de maximo 100
             'tlf' =>$this->faker->numberBetween(11111111,99999999),
             'tlm' =>$this->faker->numberBetween(11111111,99999999),
-            'credencial' =>$this->faker->randomElement(["7777","0"])
+            'credencial' =>$this->faker->randomElement(["7777",null])
         ];
     }
 

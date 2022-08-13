@@ -7,6 +7,6 @@
  Ingenieria Informatica
  Profesor Marcel Molina
 # Creado Por:
-    -José Alejandro Valduz Contreras CIV 26841447
-   -Frank Benitez CIV 
+   -José A. Valduz C. CIV 26841447
+   -Frank Benitez CIV 26156872
 
