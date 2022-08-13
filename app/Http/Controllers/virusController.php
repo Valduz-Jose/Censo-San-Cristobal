@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\info;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\InfoRequest;
 
 class virusController extends Controller
 {
@@ -26,7 +27,7 @@ class virusController extends Controller
         //compact('name')  ['name'=>$name]
     }
 
-    public function store(Request $request){
+    public function store(InfoRequest $request){
         $sintomas=$request->input('sintomas');
         $sintomaDB="";
         if($sintomas!=null){
