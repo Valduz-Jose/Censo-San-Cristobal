@@ -27,7 +27,7 @@ class InfoRequest extends FormRequest
             'virus'=>'required',
             'atendido'=>'required',
             'centrosalud'=>'nullable',
-            'sintomas'=>'required',
+            'sintomas'=>'nullable',
             'otroSintoma'=>'nullable'
             //
         ];
