@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Info;
 use App\Models\User;
+use App\Models\info;
 use Illuminate\Support\Facades\Auth;
 
 class virusController extends Controller
@@ -40,12 +40,13 @@ class virusController extends Controller
         $usermail= session('userMail');
         $user = User::where('email',$usermail)->first();
         $id=$user->cedula;
-        $info = Info::find($id);
+        $info = info::find($id);
 
         if($info==null){
-            $info= new Info;
+            $info= new info;
+            //saf
         }
-        
+        //sac
         $info->id= $id;
         if($request->input('virus')==null){
             return redirect()->to('virus')->withErrors('Por favor ingrese el virus con el que fue diagnosticado');
